@@ -1,0 +1,92 @@
+-- Typed models for the VoxgigOpenapiSpec SDK (LuaLS annotations).
+--
+-- GENERATED from the API model: main.kit.entity.<e>.fields{} and per-op
+-- params (op.<name>.points[].g.params[]). Field/param types come from the
+-- canonical type sentinels via @voxgig/sdkgen canonToType (source of truth:
+-- @voxgig/apidef VALID_CANON). Annotations only — no runtime effect. Do not
+-- edit by hand.
+
+---@class GetCompanyEnrichment
+---@field annual_revenue? string
+---@field city? string
+---@field company_name? string
+---@field country? string
+---@field country_iso_code? string
+---@field crunchbase_url? string
+---@field description? string
+---@field domain? string
+---@field email_addresses? table
+---@field employee_count? string
+---@field employee_range? string
+---@field exchange? string
+---@field facebook_url? string
+---@field global_ranking? string
+---@field industry? string
+---@field instagram_url? string
+---@field latitude? number
+---@field linkedin_url? string
+---@field logo? string
+---@field longitude? number
+---@field naics_code? string
+---@field phone_numbers? table
+---@field postal_code? string
+---@field revenue_range? string
+---@field sic_code? string
+---@field state? string
+---@field street_address? string
+---@field tags? table
+---@field technologies? table
+---@field ticker? string
+---@field twitter_url? string
+---@field type? string
+---@field year_founded? string
+
+---@class GetCompanyEnrichmentListMatch
+---@field domain string
+---@field field? string
+
+---@class PostCompanyEnrichment
+---@field annual_revenue? string
+---@field api_key? string
+---@field city? string
+---@field company_name? string
+---@field country? string
+---@field country_iso_code? string
+---@field crunchbase_url? string
+---@field description? string
+---@field domain? string
+---@field email_addresses? table
+---@field employee_count? string
+---@field employee_range? string
+---@field exchange? string
+---@field facebook_url? string
+---@field fields? string
+---@field global_ranking? string
+---@field industry? string
+---@field instagram_url? string
+---@field latitude? number
+---@field linkedin_url? string
+---@field logo? string
+---@field longitude? number
+---@field naics_code? string
+---@field phone_numbers? table
+---@field postal_code? string
+---@field revenue_range? string
+---@field sic_code? string
+---@field state? string
+---@field street_address? string
+---@field tags? table
+---@field technologies? table
+---@field ticker? string
+---@field twitter_url? string
+---@field type? string
+---@field year_founded? string
+
+---@class PostCompanyEnrichmentCreateData
+---@field api_key? string
+---@field domain string
+---@field fields? string
+
+local M = {}
+
+return M
