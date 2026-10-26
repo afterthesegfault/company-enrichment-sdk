@@ -1,0 +1,420 @@
+openapi: 3.0.3
+info:
+  title: Abstract Company Enrichment API
+  description: 'Enrich a company domain with firmographic data — company name, description,
+    logo, address and coordinates, industry classification (SIC/NAICS), employee and
+    revenue ranges, contact details, social profiles, financial identifiers, tags, and
+    detected technologies — in a single request. Authenticate with your API key as the
+    `api_key` query parameter, or as an `Authorization: Bearer <key>` header. GET and
+    POST (form-encoded or JSON) are both supported.'
+  version: 1.0.0
+  termsOfService: https://www.abstractapi.com/legal/legal
+  contact:
+    name: Abstract API
+    url: https://www.abstractapi.com/api/company-enrichment-api
+  license:
+    name: Commercial — see Terms of Service
+    url: https://www.abstractapi.com/legal/legal
+externalDocs:
+  description: Official documentation
+  url: https://docs.abstractapi.com/api/company-enrichment
+servers:
+- url: https://companyenrichment.abstractapi.com/v2
+security:
+- ApiKeyQuery: []
+- BearerAuth: []
+paths:
+  /:
+    get:
+      operationId: getCompanyEnrichment
+      summary: Enrich a company by domain
+      description: 'Returns firmographic data for the company that owns the supplied
+        domain. The API key may be supplied as the `api_key` query parameter or as an
+        `Authorization: Bearer <key>` header.'
+      parameters:
+      - name: domain
+        in: query
+        required: true
+        description: Domain of the company to enrich.
+        schema:
+          type: string
+        example: airbnb.com
+      - name: fields
+        in: query
+        required: false
+        description: Optional comma-separated list of top-level JSON keys to return. When
+          omitted, all available fields are returned.
+        schema:
+          type: string
+        example: company_name,industry,employee_range
+      responses:
+        '200':
+          description: Enrichment details for the requested company.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompanyEnrichment'
+              example:
+                domain: airbnb.com
+                company_name: Airbnb
+                description: Airbnb is a company that provides a wide array of accommodations
+                  for every type of traveler. With over 7 million vacation rentals and
+                  2 million top-rated guest favorites across more than 220 countries and
+                  regions, Airbnb offers a unique and diverse selection of stays worldwide.
+                logo: https://logo.abstractapi.com/cb6281618-c67a-5004-9c9b-29fc2245a4f7_-airbnb.png
+                year_founded: '2008'
+                street_address: 888 Brannan Street
+                city: San Francisco
+                state: California
+                country: United States
+                country_iso_code: US
+                postal_code: '94103'
+                latitude: 37.7719568
+                longitude: -122.4054484
+                sic_code: '87'
+                naics_code: '54'
+                industry: Travel Services
+                employee_count: '6907'
+                employee_range: 5K-10K
+                annual_revenue: '9917000000'
+                revenue_range: $1B-$10B
+                phone_numbers:
+                - '+14155104027'
+                email_addresses:
+                - support@airbnb.com
+                type: public
+                ticker: ABNB
+                exchange: XNAS
+                global_ranking: '7391'
+                tags:
+                - Hospitality
+                - Travel
+                technologies:
+                - Google Analytics
+                - Javascript
+                - Segment
+                - Mixpanel
+                - Branch
+                - Salesforce
+                - New Relic
+                - Facebook Pixel
+                linkedin_url: linkedin.com/company/airbnb
+                facebook_url: facebook.com/airbnb
+                twitter_url: twitter.com/airbnb
+                instagram_url: instagram.com/airbnb
+                crunchbase_url: crunchbase.com/organization/airbnb
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/QuotaReached'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+    post:
+      operationId: postCompanyEnrichment
+      summary: Enrich a company by domain
+      description: 'Same as the GET operation. The API key may be supplied in the request
+        body, as the `api_key` query parameter, or as an `Authorization: Bearer <key>`
+        header.'
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/EnrichmentRequest'
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EnrichmentRequest'
+      responses:
+        '200':
+          description: Enrichment details for the requested company.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CompanyEnrichment'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '422':
+          $ref: '#/components/responses/QuotaReached'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/ServerError'
+components:
+  securitySchemes:
+    ApiKeyQuery:
+      type: apiKey
+      in: query
+      name: api_key
+      description: Your unique Company Enrichment API key.
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: Send your API key as a Bearer token; omit `api_key` from the query
+        string.
+  responses:
+    BadRequest:
+      description: Bad request — a required parameter is missing or failed validation.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error:
+              message: A validation error occurred.
+              code: validation_error
+              details:
+                domain:
+                - This is a required argument.
+    Unauthorized:
+      description: Unauthorized — missing or invalid API key.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+          example:
+            error:
+              message: Invalid API key provided.
+              code: unauthorized
+              details: null
+    QuotaReached:
+      description: Unprocessable — monthly quota reached or insufficient API credits.
+        The body follows the standard error envelope.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    TooManyRequests:
+      description: Too Many Requests — rate limit exceeded. The body follows the standard
+        error envelope.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+    ServerError:
+      description: Internal server error. The body follows the standard error envelope.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Error'
+  schemas:
+    EnrichmentRequest:
+      type: object
+      required:
+      - domain
+      properties:
+        domain:
+          type: string
+          description: Domain of the company to enrich.
+          example: airbnb.com
+        fields:
+          type: string
+          description: Optional comma-separated list of top-level JSON keys to return.
+            When omitted, all available fields are returned.
+          example: company_name,industry,employee_range
+        api_key:
+          type: string
+          description: 'Your API key. Optional here if supplied as the `api_key` query
+            parameter or an `Authorization: Bearer <key>` header.'
+    Error:
+      type: object
+      required:
+      - error
+      properties:
+        error:
+          type: object
+          required:
+          - message
+          - code
+          properties:
+            message:
+              type: string
+              description: Human-readable description of the error.
+              example: A validation error occurred.
+            code:
+              type: string
+              description: Machine-readable error code, e.g. validation_error or unauthorized.
+              example: validation_error
+            details:
+              type: object
+              nullable: true
+              description: Field-keyed validation messages for validation_error responses;
+                null for other error types.
+              additionalProperties:
+                type: array
+                items:
+                  type: string
+    CompanyEnrichment:
+      type: object
+      properties:
+        domain:
+          type: string
+          description: The domain that was enriched (echoes the input).
+          example: airbnb.com
+        company_name:
+          type: string
+          nullable: true
+          description: Company name. Null when unknown.
+          example: Airbnb
+        description:
+          type: string
+          nullable: true
+          description: Short description of the company. Null when unknown.
+        logo:
+          type: string
+          nullable: true
+          description: URL of the company logo. Null when unavailable.
+        year_founded:
+          type: string
+          nullable: true
+          description: Year the company was founded. Null when unknown.
+          example: '2008'
+        street_address:
+          type: string
+          nullable: true
+          description: Street address of the company headquarters. Null when unknown.
+        city:
+          type: string
+          nullable: true
+          description: City of the company headquarters. Null when unknown.
+        state:
+          type: string
+          nullable: true
+          description: State or region of the company headquarters. Null when unknown.
+        country:
+          type: string
+          nullable: true
+          description: Country of the company headquarters. Null when unknown.
+        country_iso_code:
+          type: string
+          nullable: true
+          description: ISO country code of the company headquarters. Null when unknown.
+          example: US
+        postal_code:
+          type: string
+          nullable: true
+          description: Postal or ZIP code of the company headquarters. Null when unknown.
+        latitude:
+          type: number
+          nullable: true
+          description: Latitude of the company headquarters. Null when unknown.
+          example: 37.7719568
+        longitude:
+          type: number
+          nullable: true
+          description: Longitude of the company headquarters. Null when unknown.
+          example: -122.4054484
+        sic_code:
+          type: string
+          nullable: true
+          description: Standard Industrial Classification (SIC) code. Null when unknown.
+          example: '87'
+        naics_code:
+          type: string
+          nullable: true
+          description: North American Industry Classification System (NAICS) code. Null
+            when unknown.
+          example: '54'
+        industry:
+          type: string
+          nullable: true
+          description: Industry the company operates in. Null when unknown.
+          example: Travel Services
+        employee_count:
+          type: string
+          nullable: true
+          description: Estimated number of employees. Null when unknown.
+          example: '6907'
+        employee_range:
+          type: string
+          nullable: true
+          description: Estimated employee count range. Null when unknown.
+          example: 5K-10K
+        annual_revenue:
+          type: string
+          nullable: true
+          description: Estimated annual revenue. Null when unknown.
+          example: '9917000000'
+        revenue_range:
+          type: string
+          nullable: true
+          description: Estimated annual revenue range. Null when unknown.
+          example: $1B-$10B
+        phone_numbers:
+          type: array
+          nullable: true
+          description: Known company phone numbers. Null or empty when none are found.
+          items:
+            type: string
+        email_addresses:
+          type: array
+          nullable: true
+          description: Known company email addresses. Null or empty when none are found.
+          items:
+            type: string
+        type:
+          type: string
+          nullable: true
+          description: Whether the company is public or private. Null when unknown.
+          enum:
+          - public
+          - private
+          example: public
+        ticker:
+          type: string
+          nullable: true
+          description: Stock ticker symbol for publicly traded companies. Null otherwise.
+          example: ABNB
+        exchange:
+          type: string
+          nullable: true
+          description: Stock exchange where the company is listed. Null otherwise.
+          example: XNAS
+        global_ranking:
+          type: string
+          nullable: true
+          description: Global web traffic ranking of the company. Null when unknown.
+          example: '7391'
+        tags:
+          type: array
+          nullable: true
+          description: Descriptive tags for the company. Null or empty when none are found.
+          items:
+            type: string
+        technologies:
+          type: array
+          nullable: true
+          description: Technologies detected in use by the company. Null or empty when
+            none are found.
+          items:
+            type: string
+        linkedin_url:
+          type: string
+          nullable: true
+          description: LinkedIn profile URL. Null when unknown.
+          example: linkedin.com/company/airbnb
+        facebook_url:
+          type: string
+          nullable: true
+          description: Facebook profile URL. Null when unknown.
+          example: facebook.com/airbnb
+        twitter_url:
+          type: string
+          nullable: true
+          description: Twitter/X profile URL. Null when unknown.
+          example: twitter.com/airbnb
+        instagram_url:
+          type: string
+          nullable: true
+          description: Instagram profile URL. Null when unknown.
+          example: instagram.com/airbnb
+        crunchbase_url:
+          type: string
+          nullable: true
+          description: Crunchbase profile URL. Null when unknown.
+          example: crunchbase.com/organization/airbnb

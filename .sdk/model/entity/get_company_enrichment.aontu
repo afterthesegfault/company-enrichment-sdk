@@ -1,0 +1,294 @@
+# Entity: get_company_enrichment
+
+main: kit: entity: get_company_enrichment: {
+
+  alias: field: {}
+
+  fields: {
+    annual_revenue: {
+      h: "Annual Revenue"
+      n: "annual_revenue"
+      r: false
+      sh: "Estimated annual revenue."
+      t: "`$STRING`"
+    }
+    city: {
+      h: "City"
+      n: "city"
+      r: false
+      sh: "City of the company headquarters."
+      t: "`$STRING`"
+    }
+    company_name: {
+      h: "Company Name"
+      n: "company_name"
+      r: false
+      sh: "Company name."
+      t: "`$STRING`"
+    }
+    country: {
+      h: "Country"
+      n: "country"
+      r: false
+      sh: "Country of the company headquarters."
+      t: "`$STRING`"
+    }
+    country_iso_code: {
+      h: "Country Iso Code"
+      n: "country_iso_code"
+      r: false
+      sh: "ISO country code of the company headquarters."
+      t: "`$STRING`"
+    }
+    crunchbase_url: {
+      h: "Crunchbase Url"
+      n: "crunchbase_url"
+      r: false
+      sh: "Crunchbase profile URL."
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      sh: "Short description of the company."
+      t: "`$STRING`"
+    }
+    domain: {
+      h: "Domain"
+      n: "domain"
+      r: false
+      sh: "The domain that was enriched (echoes the input)."
+      t: "`$STRING`"
+    }
+    email_addresses: {
+      h: "Email Addresses"
+      n: "email_addresses"
+      r: false
+      sh: "Known company email addresses."
+      t: "`$ARRAY`"
+    }
+    employee_count: {
+      h: "Employee Count"
+      n: "employee_count"
+      r: false
+      sh: "Estimated number of employees."
+      t: "`$STRING`"
+    }
+    employee_range: {
+      h: "Employee Range"
+      n: "employee_range"
+      r: false
+      sh: "Estimated employee count range."
+      t: "`$STRING`"
+    }
+    exchange: {
+      h: "Exchange"
+      n: "exchange"
+      r: false
+      sh: "Stock exchange where the company is listed."
+      t: "`$STRING`"
+    }
+    facebook_url: {
+      h: "Facebook Url"
+      n: "facebook_url"
+      r: false
+      sh: "Facebook profile URL."
+      t: "`$STRING`"
+    }
+    global_ranking: {
+      h: "Global Ranking"
+      n: "global_ranking"
+      r: false
+      sh: "Global web traffic ranking of the company."
+      t: "`$STRING`"
+    }
+    industry: {
+      h: "Industry"
+      n: "industry"
+      r: false
+      sh: "Industry the company operates in."
+      t: "`$STRING`"
+    }
+    instagram_url: {
+      h: "Instagram Url"
+      n: "instagram_url"
+      r: false
+      sh: "Instagram profile URL."
+      t: "`$STRING`"
+    }
+    latitude: {
+      h: "Latitude"
+      n: "latitude"
+      r: false
+      sh: "Latitude of the company headquarters."
+      t: "`$NUMBER`"
+    }
+    linkedin_url: {
+      h: "Linkedin Url"
+      n: "linkedin_url"
+      r: false
+      sh: "LinkedIn profile URL."
+      t: "`$STRING`"
+    }
+    logo: {
+      h: "Logo"
+      n: "logo"
+      r: false
+      sh: "URL of the company logo."
+      t: "`$STRING`"
+    }
+    longitude: {
+      h: "Longitude"
+      n: "longitude"
+      r: false
+      sh: "Longitude of the company headquarters."
+      t: "`$NUMBER`"
+    }
+    naics_code: {
+      h: "Naics Code"
+      n: "naics_code"
+      r: false
+      sh: "North American Industry Classification System (NAICS) code."
+      t: "`$STRING`"
+    }
+    phone_numbers: {
+      h: "Phone Numbers"
+      n: "phone_numbers"
+      r: false
+      sh: "Known company phone numbers."
+      t: "`$ARRAY`"
+    }
+    postal_code: {
+      h: "Postal Code"
+      n: "postal_code"
+      r: false
+      sh: "Postal or ZIP code of the company headquarters."
+      t: "`$STRING`"
+    }
+    revenue_range: {
+      h: "Revenue Range"
+      n: "revenue_range"
+      r: false
+      sh: "Estimated annual revenue range."
+      t: "`$STRING`"
+    }
+    sic_code: {
+      h: "Sic Code"
+      n: "sic_code"
+      r: false
+      sh: "Standard Industrial Classification (SIC) code."
+      t: "`$STRING`"
+    }
+    state: {
+      h: "State"
+      n: "state"
+      r: false
+      sh: "State or region of the company headquarters."
+      t: "`$STRING`"
+    }
+    street_address: {
+      h: "Street Address"
+      n: "street_address"
+      r: false
+      sh: "Street address of the company headquarters."
+      t: "`$STRING`"
+    }
+    tags: {
+      h: "Tags"
+      n: "tags"
+      r: false
+      sh: "Descriptive tags for the company."
+      t: "`$ARRAY`"
+    }
+    technologies: {
+      h: "Technologies"
+      n: "technologies"
+      r: false
+      sh: "Technologies detected in use by the company."
+      t: "`$ARRAY`"
+    }
+    ticker: {
+      h: "Ticker"
+      n: "ticker"
+      r: false
+      sh: "Stock ticker symbol for publicly traded companies."
+      t: "`$STRING`"
+    }
+    twitter_url: {
+      h: "Twitter Url"
+      n: "twitter_url"
+      r: false
+      sh: "Twitter/X profile URL."
+      t: "`$STRING`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: false
+      sh: "Whether the company is public or private."
+      t: "`$STRING`"
+    }
+    year_founded: {
+      h: "Year Founded"
+      n: "year_founded"
+      r: false
+      sh: "Year the company was founded."
+      t: "`$STRING`"
+    }
+  }
+
+  name: "get_company_enrichment"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "airbnb.com"
+                k: "query"
+                n: "domain"
+                or: "domain"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "company_name,industry,employee_range"
+                k: "query"
+                n: "field"
+                or: "fields"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/"
+          q: {
+            exist: [
+              "domain"
+            ]
+          }
+          rs: {
+            kind: "json"
+            media: "application/json"
+          }
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

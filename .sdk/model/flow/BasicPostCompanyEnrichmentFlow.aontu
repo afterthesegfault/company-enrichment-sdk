@@ -1,0 +1,18 @@
+# BasicPostCompanyEnrichmentFlow
+
+main: kit: flow: BasicPostCompanyEnrichmentFlow:
+{
+  entity: "post_company_enrichment",
+  kind: "basic",
+  name: "BasicPostCompanyEnrichmentFlow",
+  step: [
+    {
+      i: {
+        ref: "post_company_enrichment_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicPostCompanyEnrichmentFlow"
+}

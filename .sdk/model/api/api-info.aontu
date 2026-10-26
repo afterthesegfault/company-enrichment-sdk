@@ -1,0 +1,47 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      contact: {
+        name: "Abstract API"
+        url: "https://www.abstractapi.com/api/company-enrichment-api"
+      }
+      description: "Enrich a company domain with firmographic data — company name, description, logo, address and coordinates, industry classification (SIC/NAICS), employee and revenue ranges, contact details, social profiles, financial identifiers, tags, and detected technologies — in a single request. Authenticate with your API key as the `api_key` query parameter, or as an `Authorization: Bearer <key>` header. GET and POST (form-encoded or JSON) are both supported."
+      license: {
+        name: "Commercial — see Terms of Service"
+        url: "https://www.abstractapi.com/legal/legal"
+      }
+      security: {
+        alternatives: [
+          [
+            {
+              in: "header"
+              name: "Authorization"
+              prefix: "Bearer"
+              scheme: "BearerAuth"
+              type: "http"
+            }
+          ]
+        ]
+        in: "query"
+        name: "api_key"
+        prefix: ""
+        scheme: "ApiKeyQuery"
+        type: "apiKey"
+      }
+      servers: [
+        {
+          url: "https://companyenrichment.abstractapi.com/v2"
+        }
+      ]
+      summary: "Enrich a company domain with firmographic data — company name, description, logo, address and coordinates, industry classification (SIC/NAICS), employee and revenue ranges, contact details, social profiles, financial identifiers, tags,…"
+      termsOfService: "https://www.abstractapi.com/legal/legal"
+      title: "Abstract Company Enrichment API"
+      version: "1.0.0"
+      website: "https://docs.abstractapi.com/api/company-enrichment"
+    }
+  }
+}
+

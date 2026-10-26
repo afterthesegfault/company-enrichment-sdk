@@ -1,0 +1,1809 @@
+{
+  "NAME": "VOXGIG-OPENAPI-SPEC",
+  "Name": "VoxgigOpenapiSpec",
+  "def": "company-enrichment.openapi.yaml",
+  "main": {
+    "api": {
+      "entity": {},
+      "guide": {}
+    },
+    "custom": {
+      "plurals": {}
+    },
+    "def": {
+      "desc": ""
+    },
+    "kit": {
+      "author": {
+        "name": "",
+        "url": ""
+      },
+      "config": {
+        "docs_order": [
+          "ts",
+          "py",
+          "php",
+          "go",
+          "rb",
+          "lua"
+        ],
+        "headers": {
+          "content-type": "application/json"
+        },
+        "repr": "auto"
+      },
+      "contributor": {},
+      "doc": {
+        "active": true,
+        "assets": {
+          "path": ".sdk/doc/assets"
+        },
+        "brand": {
+          "label": "",
+          "notice": "",
+          "shortNotice": "",
+          "url": ""
+        },
+        "ci": {
+          "active": true,
+          "branch": "main"
+        },
+        "content": {
+          "path": ".sdk/doc/content"
+        },
+        "edition": {
+          "github-pages": {
+            "active": false,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "github-pages",
+            "name": "github-pages",
+            "origname": "",
+            "output": {
+              "path": "docs"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          },
+          "summary": {
+            "active": true,
+            "base": "node_modules/@voxgig/docgen/project/.sdk",
+            "brand": {},
+            "filter": {
+              "entities": [],
+              "features": [],
+              "targets": []
+            },
+            "kind": "summary",
+            "name": "summary",
+            "origname": "",
+            "output": {
+              "path": "SUMMARY.md"
+            },
+            "package": "@voxgig/docgen",
+            "published": false,
+            "site": {
+              "active": true
+            },
+            "style": {},
+            "title": ""
+          }
+        },
+        "qa": {
+          "vocabulary": []
+        },
+        "style": {
+          "color": {
+            "accent": "#00c6d8",
+            "background": "#f5f5f9",
+            "darkBackground": "#0f1117",
+            "darkText": "#e6edf3",
+            "primary": "#e70042",
+            "text": "#0a0a0a"
+          },
+          "font": "Nunito, system-ui, sans-serif",
+          "fontFile": "",
+          "headingFont": "Nunito, system-ui, sans-serif",
+          "headingFontFile": "",
+          "logo": "",
+          "mode": "light",
+          "mono": "ui-monospace, monospace",
+          "monoFile": ""
+        },
+        "target": {}
+      },
+      "entity": {
+        "get_company_enrichment": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "annual_revenue": {
+              "a": true,
+              "h": "Annual Revenue",
+              "n": "annual_revenue",
+              "r": false,
+              "sh": "Estimated annual revenue.",
+              "t": "`$STRING`"
+            },
+            "city": {
+              "a": true,
+              "h": "City",
+              "n": "city",
+              "r": false,
+              "sh": "City of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "company_name": {
+              "a": true,
+              "h": "Company Name",
+              "n": "company_name",
+              "r": false,
+              "sh": "Company name.",
+              "t": "`$STRING`"
+            },
+            "country": {
+              "a": true,
+              "h": "Country",
+              "n": "country",
+              "r": false,
+              "sh": "Country of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "country_iso_code": {
+              "a": true,
+              "h": "Country Iso Code",
+              "n": "country_iso_code",
+              "r": false,
+              "sh": "ISO country code of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "crunchbase_url": {
+              "a": true,
+              "h": "Crunchbase Url",
+              "n": "crunchbase_url",
+              "r": false,
+              "sh": "Crunchbase profile URL.",
+              "t": "`$STRING`"
+            },
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": false,
+              "sh": "Short description of the company.",
+              "t": "`$STRING`"
+            },
+            "domain": {
+              "a": true,
+              "h": "Domain",
+              "n": "domain",
+              "r": false,
+              "sh": "The domain that was enriched (echoes the input).",
+              "t": "`$STRING`"
+            },
+            "email_addresses": {
+              "a": true,
+              "h": "Email Addresses",
+              "n": "email_addresses",
+              "r": false,
+              "sh": "Known company email addresses.",
+              "t": "`$ARRAY`"
+            },
+            "employee_count": {
+              "a": true,
+              "h": "Employee Count",
+              "n": "employee_count",
+              "r": false,
+              "sh": "Estimated number of employees.",
+              "t": "`$STRING`"
+            },
+            "employee_range": {
+              "a": true,
+              "h": "Employee Range",
+              "n": "employee_range",
+              "r": false,
+              "sh": "Estimated employee count range.",
+              "t": "`$STRING`"
+            },
+            "exchange": {
+              "a": true,
+              "h": "Exchange",
+              "n": "exchange",
+              "r": false,
+              "sh": "Stock exchange where the company is listed.",
+              "t": "`$STRING`"
+            },
+            "facebook_url": {
+              "a": true,
+              "h": "Facebook Url",
+              "n": "facebook_url",
+              "r": false,
+              "sh": "Facebook profile URL.",
+              "t": "`$STRING`"
+            },
+            "global_ranking": {
+              "a": true,
+              "h": "Global Ranking",
+              "n": "global_ranking",
+              "r": false,
+              "sh": "Global web traffic ranking of the company.",
+              "t": "`$STRING`"
+            },
+            "industry": {
+              "a": true,
+              "h": "Industry",
+              "n": "industry",
+              "r": false,
+              "sh": "Industry the company operates in.",
+              "t": "`$STRING`"
+            },
+            "instagram_url": {
+              "a": true,
+              "h": "Instagram Url",
+              "n": "instagram_url",
+              "r": false,
+              "sh": "Instagram profile URL.",
+              "t": "`$STRING`"
+            },
+            "latitude": {
+              "a": true,
+              "h": "Latitude",
+              "n": "latitude",
+              "r": false,
+              "sh": "Latitude of the company headquarters.",
+              "t": "`$NUMBER`"
+            },
+            "linkedin_url": {
+              "a": true,
+              "h": "Linkedin Url",
+              "n": "linkedin_url",
+              "r": false,
+              "sh": "LinkedIn profile URL.",
+              "t": "`$STRING`"
+            },
+            "logo": {
+              "a": true,
+              "h": "Logo",
+              "n": "logo",
+              "r": false,
+              "sh": "URL of the company logo.",
+              "t": "`$STRING`"
+            },
+            "longitude": {
+              "a": true,
+              "h": "Longitude",
+              "n": "longitude",
+              "r": false,
+              "sh": "Longitude of the company headquarters.",
+              "t": "`$NUMBER`"
+            },
+            "naics_code": {
+              "a": true,
+              "h": "Naics Code",
+              "n": "naics_code",
+              "r": false,
+              "sh": "North American Industry Classification System (NAICS) code.",
+              "t": "`$STRING`"
+            },
+            "phone_numbers": {
+              "a": true,
+              "h": "Phone Numbers",
+              "n": "phone_numbers",
+              "r": false,
+              "sh": "Known company phone numbers.",
+              "t": "`$ARRAY`"
+            },
+            "postal_code": {
+              "a": true,
+              "h": "Postal Code",
+              "n": "postal_code",
+              "r": false,
+              "sh": "Postal or ZIP code of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "revenue_range": {
+              "a": true,
+              "h": "Revenue Range",
+              "n": "revenue_range",
+              "r": false,
+              "sh": "Estimated annual revenue range.",
+              "t": "`$STRING`"
+            },
+            "sic_code": {
+              "a": true,
+              "h": "Sic Code",
+              "n": "sic_code",
+              "r": false,
+              "sh": "Standard Industrial Classification (SIC) code.",
+              "t": "`$STRING`"
+            },
+            "state": {
+              "a": true,
+              "h": "State",
+              "n": "state",
+              "r": false,
+              "sh": "State or region of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "street_address": {
+              "a": true,
+              "h": "Street Address",
+              "n": "street_address",
+              "r": false,
+              "sh": "Street address of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "tags": {
+              "a": true,
+              "h": "Tags",
+              "n": "tags",
+              "r": false,
+              "sh": "Descriptive tags for the company.",
+              "t": "`$ARRAY`"
+            },
+            "technologies": {
+              "a": true,
+              "h": "Technologies",
+              "n": "technologies",
+              "r": false,
+              "sh": "Technologies detected in use by the company.",
+              "t": "`$ARRAY`"
+            },
+            "ticker": {
+              "a": true,
+              "h": "Ticker",
+              "n": "ticker",
+              "r": false,
+              "sh": "Stock ticker symbol for publicly traded companies.",
+              "t": "`$STRING`"
+            },
+            "twitter_url": {
+              "a": true,
+              "h": "Twitter Url",
+              "n": "twitter_url",
+              "r": false,
+              "sh": "Twitter/X profile URL.",
+              "t": "`$STRING`"
+            },
+            "type": {
+              "a": true,
+              "h": "Type",
+              "n": "type",
+              "r": false,
+              "sh": "Whether the company is public or private.",
+              "t": "`$STRING`"
+            },
+            "year_founded": {
+              "a": true,
+              "h": "Year Founded",
+              "n": "year_founded",
+              "r": false,
+              "sh": "Year the company was founded.",
+              "t": "`$STRING`"
+            }
+          },
+          "name": "get_company_enrichment",
+          "op": {
+            "list": {
+              "input": "data",
+              "name": "list",
+              "points": [
+                {
+                  "a": true,
+                  "co": {
+                    "id": "GET /",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {
+                    "query": [
+                      {
+                        "a": true,
+                        "ex": "airbnb.com",
+                        "k": "query",
+                        "n": "domain",
+                        "or": "domain",
+                        "r": true,
+                        "t": "`$STRING`"
+                      },
+                      {
+                        "a": true,
+                        "ex": "company_name,industry,employee_range",
+                        "k": "query",
+                        "n": "field",
+                        "or": "fields",
+                        "r": false,
+                        "t": "`$STRING`"
+                      }
+                    ]
+                  },
+                  "k": "http",
+                  "m": "GET",
+                  "o": "/",
+                  "q": {
+                    "exist": [
+                      "domain"
+                    ]
+                  },
+                  "r": {},
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        },
+        "post_company_enrichment": {
+          "active": true,
+          "alias": {
+            "field": {}
+          },
+          "fields": {
+            "annual_revenue": {
+              "a": true,
+              "h": "Annual Revenue",
+              "n": "annual_revenue",
+              "r": false,
+              "sh": "Estimated annual revenue.",
+              "t": "`$STRING`"
+            },
+            "api_key": {
+              "a": true,
+              "h": "Api Key",
+              "n": "api_key",
+              "r": false,
+              "sh": "Your API key.",
+              "t": "`$STRING`"
+            },
+            "city": {
+              "a": true,
+              "h": "City",
+              "n": "city",
+              "r": false,
+              "sh": "City of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "company_name": {
+              "a": true,
+              "h": "Company Name",
+              "n": "company_name",
+              "r": false,
+              "sh": "Company name.",
+              "t": "`$STRING`"
+            },
+            "country": {
+              "a": true,
+              "h": "Country",
+              "n": "country",
+              "r": false,
+              "sh": "Country of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "country_iso_code": {
+              "a": true,
+              "h": "Country Iso Code",
+              "n": "country_iso_code",
+              "r": false,
+              "sh": "ISO country code of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "crunchbase_url": {
+              "a": true,
+              "h": "Crunchbase Url",
+              "n": "crunchbase_url",
+              "r": false,
+              "sh": "Crunchbase profile URL.",
+              "t": "`$STRING`"
+            },
+            "description": {
+              "a": true,
+              "h": "Description",
+              "n": "description",
+              "r": false,
+              "sh": "Short description of the company.",
+              "t": "`$STRING`"
+            },
+            "domain": {
+              "a": true,
+              "h": "Domain",
+              "n": "domain",
+              "op": {
+                "create": {
+                  "req": true,
+                  "type": "`$STRING`"
+                }
+              },
+              "r": false,
+              "sh": "The domain that was enriched (echoes the input).",
+              "t": "`$STRING`"
+            },
+            "email_addresses": {
+              "a": true,
+              "h": "Email Addresses",
+              "n": "email_addresses",
+              "r": false,
+              "sh": "Known company email addresses.",
+              "t": "`$ARRAY`"
+            },
+            "employee_count": {
+              "a": true,
+              "h": "Employee Count",
+              "n": "employee_count",
+              "r": false,
+              "sh": "Estimated number of employees.",
+              "t": "`$STRING`"
+            },
+            "employee_range": {
+              "a": true,
+              "h": "Employee Range",
+              "n": "employee_range",
+              "r": false,
+              "sh": "Estimated employee count range.",
+              "t": "`$STRING`"
+            },
+            "exchange": {
+              "a": true,
+              "h": "Exchange",
+              "n": "exchange",
+              "r": false,
+              "sh": "Stock exchange where the company is listed.",
+              "t": "`$STRING`"
+            },
+            "facebook_url": {
+              "a": true,
+              "h": "Facebook Url",
+              "n": "facebook_url",
+              "r": false,
+              "sh": "Facebook profile URL.",
+              "t": "`$STRING`"
+            },
+            "fields": {
+              "a": true,
+              "h": "Fields",
+              "n": "fields",
+              "r": false,
+              "sh": "Optional comma-separated list of top-level JSON keys to return.",
+              "t": "`$STRING`"
+            },
+            "global_ranking": {
+              "a": true,
+              "h": "Global Ranking",
+              "n": "global_ranking",
+              "r": false,
+              "sh": "Global web traffic ranking of the company.",
+              "t": "`$STRING`"
+            },
+            "industry": {
+              "a": true,
+              "h": "Industry",
+              "n": "industry",
+              "r": false,
+              "sh": "Industry the company operates in.",
+              "t": "`$STRING`"
+            },
+            "instagram_url": {
+              "a": true,
+              "h": "Instagram Url",
+              "n": "instagram_url",
+              "r": false,
+              "sh": "Instagram profile URL.",
+              "t": "`$STRING`"
+            },
+            "latitude": {
+              "a": true,
+              "h": "Latitude",
+              "n": "latitude",
+              "r": false,
+              "sh": "Latitude of the company headquarters.",
+              "t": "`$NUMBER`"
+            },
+            "linkedin_url": {
+              "a": true,
+              "h": "Linkedin Url",
+              "n": "linkedin_url",
+              "r": false,
+              "sh": "LinkedIn profile URL.",
+              "t": "`$STRING`"
+            },
+            "logo": {
+              "a": true,
+              "h": "Logo",
+              "n": "logo",
+              "r": false,
+              "sh": "URL of the company logo.",
+              "t": "`$STRING`"
+            },
+            "longitude": {
+              "a": true,
+              "h": "Longitude",
+              "n": "longitude",
+              "r": false,
+              "sh": "Longitude of the company headquarters.",
+              "t": "`$NUMBER`"
+            },
+            "naics_code": {
+              "a": true,
+              "h": "Naics Code",
+              "n": "naics_code",
+              "r": false,
+              "sh": "North American Industry Classification System (NAICS) code.",
+              "t": "`$STRING`"
+            },
+            "phone_numbers": {
+              "a": true,
+              "h": "Phone Numbers",
+              "n": "phone_numbers",
+              "r": false,
+              "sh": "Known company phone numbers.",
+              "t": "`$ARRAY`"
+            },
+            "postal_code": {
+              "a": true,
+              "h": "Postal Code",
+              "n": "postal_code",
+              "r": false,
+              "sh": "Postal or ZIP code of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "revenue_range": {
+              "a": true,
+              "h": "Revenue Range",
+              "n": "revenue_range",
+              "r": false,
+              "sh": "Estimated annual revenue range.",
+              "t": "`$STRING`"
+            },
+            "sic_code": {
+              "a": true,
+              "h": "Sic Code",
+              "n": "sic_code",
+              "r": false,
+              "sh": "Standard Industrial Classification (SIC) code.",
+              "t": "`$STRING`"
+            },
+            "state": {
+              "a": true,
+              "h": "State",
+              "n": "state",
+              "r": false,
+              "sh": "State or region of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "street_address": {
+              "a": true,
+              "h": "Street Address",
+              "n": "street_address",
+              "r": false,
+              "sh": "Street address of the company headquarters.",
+              "t": "`$STRING`"
+            },
+            "tags": {
+              "a": true,
+              "h": "Tags",
+              "n": "tags",
+              "r": false,
+              "sh": "Descriptive tags for the company.",
+              "t": "`$ARRAY`"
+            },
+            "technologies": {
+              "a": true,
+              "h": "Technologies",
+              "n": "technologies",
+              "r": false,
+              "sh": "Technologies detected in use by the company.",
+              "t": "`$ARRAY`"
+            },
+            "ticker": {
+              "a": true,
+              "h": "Ticker",
+              "n": "ticker",
+              "r": false,
+              "sh": "Stock ticker symbol for publicly traded companies.",
+              "t": "`$STRING`"
+            },
+            "twitter_url": {
+              "a": true,
+              "h": "Twitter Url",
+              "n": "twitter_url",
+              "r": false,
+              "sh": "Twitter/X profile URL.",
+              "t": "`$STRING`"
+            },
+            "type": {
+              "a": true,
+              "h": "Type",
+              "n": "type",
+              "r": false,
+              "sh": "Whether the company is public or private.",
+              "t": "`$STRING`"
+            },
+            "year_founded": {
+              "a": true,
+              "h": "Year Founded",
+              "n": "year_founded",
+              "r": false,
+              "sh": "Year the company was founded.",
+              "t": "`$STRING`"
+            }
+          },
+          "name": "post_company_enrichment",
+          "op": {
+            "create": {
+              "input": "data",
+              "name": "create",
+              "points": [
+                {
+                  "a": true,
+                  "bf": [
+                    "api_key",
+                    "domain",
+                    "fields"
+                  ],
+                  "co": {
+                    "id": "POST /",
+                    "source": "openapi3",
+                    "version": 2
+                  },
+                  "g": {},
+                  "k": "http",
+                  "m": "POST",
+                  "o": "/",
+                  "q": {},
+                  "r": {},
+                  "rb": {
+                    "alternatives": [
+                      {
+                        "fields": [
+                          {
+                            "name": "api_key"
+                          },
+                          {
+                            "name": "domain"
+                          },
+                          {
+                            "name": "fields"
+                          }
+                        ],
+                        "kind": "form",
+                        "media": "application/x-www-form-urlencoded"
+                      }
+                    ],
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "rs": {
+                    "kind": "json",
+                    "media": "application/json"
+                  },
+                  "s": [],
+                  "t": {
+                    "req": "`reqdata`",
+                    "res": "`body`"
+                  }
+                }
+              ]
+            }
+          },
+          "relations": {
+            "ancestors": []
+          }
+        }
+      },
+      "feature": {
+        "netsim": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false,
+              "errorTimes": 0,
+              "failEvery": 0,
+              "failRate": 0,
+              "failStatus": 503,
+              "failTimes": 0,
+              "latency": 0,
+              "offline": false,
+              "rateLimitTimes": 0,
+              "retryAfter": 0,
+              "seed": 1
+            },
+            "optspec": {
+              "latency": [
+                "`$ONE`",
+                "`$NUMBER`",
+                "`$MAP`"
+              ],
+              "sleep": "`$FUNCTION`"
+            },
+            "strict": false
+          },
+          "description": "Network behaviour simulation for offline testing (latency, failures, outages)",
+          "hook": {
+            "GetData": {
+              "active": false,
+              "await": false
+            },
+            "GetMatch": {
+              "active": false,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": false,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": false,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PreRequest": {
+              "active": false,
+              "await": false
+            },
+            "PreResponse": {
+              "active": false,
+              "await": false
+            },
+            "PreResult": {
+              "active": false,
+              "await": false
+            },
+            "PreSpec": {
+              "active": false,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": false,
+              "await": false
+            }
+          },
+          "name": "netsim",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Network simulation",
+          "transport": "wrap",
+          "version": "0.0.1"
+        },
+        "test": {
+          "active": true,
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "config": {
+            "options": {
+              "active": false
+            },
+            "optspec": {
+              "entity": "`$MAP`",
+              "net": "`$MAP`"
+            },
+            "strict": false
+          },
+          "description": "In-memory mock transport for testing without a live server",
+          "hook": {
+            "GetData": {
+              "active": true,
+              "await": false
+            },
+            "GetMatch": {
+              "active": true,
+              "await": false
+            },
+            "PostConstruct": {
+              "active": true,
+              "await": false
+            },
+            "PostConstructEntity": {
+              "active": true,
+              "await": false
+            },
+            "PostOperation": {
+              "active": false,
+              "await": false
+            },
+            "PrePoint": {
+              "active": true,
+              "await": false
+            },
+            "PreRequest": {
+              "active": true,
+              "await": false
+            },
+            "PreResponse": {
+              "active": true,
+              "await": false
+            },
+            "PreResult": {
+              "active": true,
+              "await": false
+            },
+            "PreSpec": {
+              "active": true,
+              "await": false
+            },
+            "PreTarget": {
+              "active": false,
+              "await": false
+            },
+            "SetData": {
+              "active": true,
+              "await": false
+            },
+            "SetMatch": {
+              "active": true,
+              "await": false
+            }
+          },
+          "name": "test",
+          "needs": {},
+          "origname": "",
+          "package": "@voxgig/sdkgen",
+          "plugin": {},
+          "spec": {},
+          "target": {
+            "go": {
+              "deps": {}
+            },
+            "go-cli": {
+              "deps": {}
+            },
+            "go-mcp": {
+              "deps": {}
+            },
+            "lua": {
+              "deps": {}
+            },
+            "php": {
+              "deps": {}
+            },
+            "py": {
+              "deps": {}
+            },
+            "rb": {
+              "deps": {}
+            },
+            "ts": {
+              "deps": {}
+            }
+          },
+          "title": "Test transport",
+          "transport": "base",
+          "version": "0.0.1"
+        }
+      },
+      "flow": {
+        "BasicGetCompanyEnrichmentFlow": {
+          "active": true,
+          "entity": "get_company_enrichment",
+          "key$": "BasicGetCompanyEnrichmentFlow",
+          "kind": "basic",
+          "name": "BasicGetCompanyEnrichmentFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {},
+              "m": {},
+              "o": "list",
+              "s": [],
+              "v": [
+                {
+                  "apply": "ItemExists",
+                  "def": {
+                    "ref": "get_company_enrichment_ref01"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "BasicPostCompanyEnrichmentFlow": {
+          "active": true,
+          "entity": "post_company_enrichment",
+          "key$": "BasicPostCompanyEnrichmentFlow",
+          "kind": "basic",
+          "name": "BasicPostCompanyEnrichmentFlow",
+          "param": {},
+          "step": [
+            {
+              "a": true,
+              "d": {},
+              "i": {
+                "ref": "post_company_enrichment_ref01"
+              },
+              "m": {},
+              "o": "create",
+              "s": [],
+              "v": []
+            }
+          ]
+        }
+      },
+      "info": {
+        "contact": {
+          "name": "Abstract API",
+          "url": "https://www.abstractapi.com/api/company-enrichment-api"
+        },
+        "description": "Enrich a company domain with firmographic data — company name, description, logo, address and coordinates, industry classification (SIC/NAICS), employee and revenue ranges, contact details, social profiles, financial identifiers, tags, and detected technologies — in a single request. Authenticate with your API key as the `api_key` query parameter, or as an `Authorization: Bearer <key>` header. GET and POST (form-encoded or JSON) are both supported.",
+        "license": {
+          "name": "Commercial — see Terms of Service",
+          "url": "https://www.abstractapi.com/legal/legal"
+        },
+        "security": {
+          "alternatives": [
+            [
+              {
+                "in": "header",
+                "name": "Authorization",
+                "prefix": "Bearer",
+                "scheme": "BearerAuth",
+                "type": "http"
+              }
+            ]
+          ],
+          "in": "query",
+          "name": "api_key",
+          "prefix": "",
+          "scheme": "ApiKeyQuery",
+          "type": "apiKey"
+        },
+        "servers": [
+          {
+            "url": "https://companyenrichment.abstractapi.com/v2"
+          }
+        ],
+        "summary": "Enrich a company domain with firmographic data — company name, description, logo, address and coordinates, industry classification (SIC/NAICS), employee and revenue ranges, contact details, social profiles, financial identifiers, tags,…",
+        "termsOfService": "https://www.abstractapi.com/legal/legal",
+        "title": "Abstract Company Enrichment API",
+        "version": "1.0.0",
+        "website": "https://docs.abstractapi.com/api/company-enrichment"
+      },
+      "option": {},
+      "optspec": {
+        "allow": {
+          "method": "GET,PUT,POST,PATCH,DELETE,OPTIONS",
+          "op": "create,update,patch,load,list,remove,command,direct,graphql"
+        },
+        "apikey": "",
+        "auth": {
+          "basic": false,
+          "in": "",
+          "name": "",
+          "prefix": ""
+        },
+        "base": "http://localhost:8000",
+        "clean": {
+          "active": true,
+          "hint": "0",
+          "keys": "key,secret,token,password,passwd,authorization,cookie,credential,signature",
+          "mask": "[redacted]",
+          "min": "4",
+          "values": ""
+        },
+        "entity": {
+          "`$CHILD`": {
+            "`$OPEN`": true,
+            "active": false,
+            "alias": {}
+          }
+        },
+        "extend": "`$ANY`",
+        "headers": {
+          "`$CHILD`": "`$STRING`"
+        },
+        "prefix": "",
+        "secret": "",
+        "server": {
+          "`$CHILD`": ""
+        },
+        "suffix": "",
+        "system": {
+          "fetch": "`$ANY`"
+        },
+        "test": {
+          "active": false,
+          "entity": {
+            "`$OPEN`": true
+          }
+        },
+        "utility": {}
+      },
+      "phase": {
+        "build": {
+          "active": true
+        },
+        "top": {
+          "active": true
+        }
+      },
+      "publisher": {
+        "name": "",
+        "security": "",
+        "url": ""
+      },
+      "repo": {
+        "host": "github.com",
+        "path": ""
+      },
+      "target": {
+        "go": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [
+              "test/feature_test.go"
+            ],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "voxgig-openapi-spec",
+            "package": "",
+            "path": ""
+          },
+          "name": "go",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/runner_test.go",
+            "test/struct_runner_test.go"
+          ],
+          "title": "Golang"
+        },
+        "go-cli": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "voxgig-openapi-spec",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-cli",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go CLI"
+        },
+        "go-mcp": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "go",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "voxgig-openapi-spec",
+            "package": "",
+            "path": ""
+          },
+          "name": "go-mcp",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "phase": {
+            "agentguide": {
+              "active": false
+            },
+            "entity": {
+              "active": false
+            },
+            "feature": {
+              "active": false
+            },
+            "readme": {
+              "active": false
+            },
+            "test": {
+              "active": false
+            }
+          },
+          "provides": {},
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "",
+              "package": "",
+              "state": "pending",
+              "url": "",
+              "vault": {
+                "alias": "",
+                "env": "",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "root"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [],
+          "title": "Go MCP server",
+          "tool": {
+            "write": false
+          }
+        },
+        "lua": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "--"
+          },
+          "deps": {
+            "dkjson": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.5"
+            }
+          },
+          "ext": "lua",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "voxgig-openapi-spec",
+            "package": "",
+            "path": ""
+          },
+          "name": "lua",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "luarocks",
+              "package": "",
+              "state": "pending",
+              "url": "https://luarocks.org",
+              "vault": {
+                "alias": "luarocks",
+                "env": "LUAROCKS_API_KEY",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.lua"
+          ],
+          "title": "Lua"
+        },
+        "php": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {},
+          "ext": "php",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "voxgig-openapi-spec",
+            "package": "",
+            "path": ""
+          },
+          "name": "php",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "packagist",
+              "package": "",
+              "state": "pending",
+              "url": "https://packagist.org",
+              "vault": {
+                "alias": "packagist",
+                "env": "PACKAGIST_API_TOKEN",
+                "recipe": ""
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/StructRunner.php"
+          ],
+          "title": "PHP"
+        },
+        "py": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "requests": {
+              "active": true,
+              "kind": "prod",
+              "version": "2.33"
+            }
+          },
+          "ext": "py",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "voxgig-openapi-spec",
+            "package": "",
+            "path": ""
+          },
+          "name": "py",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "pypi",
+              "package": "",
+              "state": "pending",
+              "url": "https://pypi.org",
+              "vault": {
+                "alias": "pypi",
+                "env": "",
+                "recipe": "pypi"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.py"
+          ],
+          "title": "Python"
+        },
+        "rb": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "#"
+          },
+          "deps": {
+            "json": {
+              "active": true,
+              "kind": "prod",
+              "version": "*"
+            }
+          },
+          "ext": "rb",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "voxgig-openapi-spec",
+            "package": "",
+            "path": ""
+          },
+          "name": "rb",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "rubygems",
+              "package": "",
+              "state": "pending",
+              "url": "https://rubygems.org",
+              "vault": {
+                "alias": "gem",
+                "env": "",
+                "recipe": "gem"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "srcfeature": false,
+          "superseded": [
+            "test/struct_runner.rb"
+          ],
+          "title": "Ruby"
+        },
+        "ts": {
+          "active": true,
+          "author": {
+            "name": "",
+            "url": ""
+          },
+          "base": "node_modules/@voxgig/sdkgen/project/.sdk",
+          "comment": {
+            "line": "//"
+          },
+          "deps": {
+            "@types/node": {
+              "active": true,
+              "kind": "dev",
+              "version": "^25.6.0"
+            },
+            "typescript": {
+              "active": true,
+              "kind": "dev",
+              "version": "^5.9.3"
+            }
+          },
+          "ext": "ts",
+          "feature": {
+            "fullset": [],
+            "trim": true
+          },
+          "module": {
+            "goversion": "",
+            "name": "voxgig-openapi-spec",
+            "package": "",
+            "path": ""
+          },
+          "name": "ts",
+          "origname": "",
+          "output": {
+            "adopt": false,
+            "create": true,
+            "path": "",
+            "repo": "",
+            "root": false,
+            "sdkrel": ""
+          },
+          "package": "@voxgig/sdkgen",
+          "provides": {
+            "schema": true,
+            "sekreto": true
+          },
+          "publish": {
+            "registry": {
+              "active": false,
+              "name": "npm",
+              "package": "",
+              "state": "pending",
+              "url": "https://registry.npmjs.org",
+              "vault": {
+                "alias": "npm",
+                "env": "",
+                "recipe": "npm"
+              }
+            },
+            "tag": {
+              "active": true,
+              "prefix": "",
+              "vault": {
+                "alias": "github",
+                "recipe": "github"
+              },
+              "via": "port"
+            },
+            "version": "0.0.1"
+          },
+          "superseded": [
+            "test/runner.ts",
+            "test/vendor/omni/compat.ts",
+            "src/feature/secrets/sekreto/Providers.ts",
+            "src/feature/secrets/sekreto/Sigv4.ts",
+            "src/feature/secrets/sekreto/provider/Registry.ts",
+            "src/feature/secrets/sekreto/provider/http.ts"
+          ],
+          "title": "TypeScript"
+        }
+      },
+      "test": {
+        "live": {
+          "app": false,
+          "base": "",
+          "strict": true
+        }
+      },
+      "text": {
+        "about_md": "",
+        "docs_url": "",
+        "entity_desc": {},
+        "homepage": "",
+        "meta_source": "",
+        "summary": "",
+        "tagline": "",
+        "title": "",
+        "website": ""
+      }
+    }
+  },
+  "name": "voxgig-openapi-spec",
+  "name-": "voxgig-openapi-spec",
+  "name_": "voxgig_openapi_spec",
+  "name__orig": "voxgig-openapi-spec",
+  "origin": "voxgig-sdk"
+}

@@ -1,0 +1,22 @@
+# BasicGetCompanyEnrichmentFlow
+
+main: kit: flow: BasicGetCompanyEnrichmentFlow:
+{
+  entity: "get_company_enrichment",
+  kind: "basic",
+  name: "BasicGetCompanyEnrichmentFlow",
+  step: [
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "get_company_enrichment_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicGetCompanyEnrichmentFlow"
+}

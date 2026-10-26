@@ -1,0 +1,21 @@
+{
+  "files": [
+    "SUMMARY.md"
+  ],
+  "config": ".sdk/doc/qa/vale.ini",
+  "routes": {},
+  "quoted": {
+    "SUMMARY.md": [
+      "City of the company headquarters. Null when unknown.",
+      "Company name. Null when unknown.",
+      "Country of the company headquarters. Null when unknown.",
+      "Enrich a company domain with firmographic data, company name, description, logo, address and coordinates, industry classification (SIC/NAICS), employee and revenue ranges, contact details, social profiles, financial identifiers, tags, and detected technologies, in a single request. Authenticate with your API key as the `api_key` query parameter, or as an `Authorization: Bearer &lt;key&gt;` header. GET and POST (form-encoded or JSON) are both supported.",
+      "Enrichment details for the requested company",
+      "Estimated annual revenue. Null when unknown.",
+      "ISO country code of the company headquarters. Null when unknown.",
+      "Send your API key as a Bearer token; omit `api_key` from the query string.",
+      "Your API key.",
+      "Your unique Company Enrichment API key."
+    ]
+  }
+}
